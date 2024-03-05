@@ -1,0 +1,205 @@
+\doxysection{Request\+Manager Class Reference}
+\hypertarget{class_request_manager}{}\label{class_request_manager}\index{RequestManager@{RequestManager}}
+
+
+Manages and processes student requests This class is responsible for managing and processing different types of requests made by students. It maintains queues of different types of requests, a record of rejected requests, a stack of processed requests for undo actions, and a set of all students.  
+
+
+
+
+{\ttfamily \#include $<$Request\+Manager.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_request_manager_adcc79212bd35fd99cd4422b8e9259302}{set\+Student\+Set}} (\mbox{\hyperlink{class_student_set}{Student\+Set}} \&students)
+\begin{DoxyCompactList}\small\item\em Sets the students in the \doxylink{class_request_manager}{Request\+Manager} This method replaces the current set of students in the \doxylink{class_request_manager}{Request\+Manager} with a new set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_student_set}{Student\+Set}} \& \mbox{\hyperlink{class_request_manager_afc20e9af081f86767ccc3f740e6ba3d7}{get\+Student\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Gets the students in the \doxylink{class_request_manager}{Request\+Manager} This method retrieves the current set of students in the \doxylink{class_request_manager}{Request\+Manager}. \end{DoxyCompactList}\item 
+queue$<$ \mbox{\hyperlink{class_request}{Request}} $>$ \mbox{\hyperlink{class_request_manager_a8a1d61ba43f307f7aa583f57909fb33d}{get\+All\+Requests}} () const
+\begin{DoxyCompactList}\small\item\em Returns all pending requests This method returns a queue containing all pending requests. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_request_manager_a8ad73941b20292e507e135e9024cc0ef}{add\+Request}} (const \mbox{\hyperlink{class_request}{Request}} \&request)
+\begin{DoxyCompactList}\small\item\em Adds a request to the \doxylink{class_request_manager}{Request\+Manager} This method adds a new request to the \doxylink{class_request_manager}{Request\+Manager} and categorizes it by its type. The request is added to all\+Requests queue and a specific queue based on its type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_request_manager_a1676742c17142801ee97ee23f2fb6d18}{process\+Request}} (\mbox{\hyperlink{class_request}{Request}} \&request)
+\begin{DoxyCompactList}\small\item\em Processes a single request This method processes a single request of type "{}enroll"{}, "{}change"{}, or "{}removal"{}. The different types of requests have different rules to be followed in order to be accepted. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_request_manager_a0a0dc8de28c666eb973ec0cacce0c49a}{process\+All\+Requests}} ()
+\begin{DoxyCompactList}\small\item\em Processes all pending requests This method processes all pending requests in the \doxylink{class_request_manager}{Request\+Manager}. It iterates over each request in the \textquotesingle{}all\+Requests\textquotesingle{} queue and uses the \textquotesingle{}process\+Request\textquotesingle{} method to process each request. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_request_manager_a2cb6a5b14b50c70d1f759f37f81c39fd}{print\+Pending}} () const
+\begin{DoxyCompactList}\small\item\em Prints all pending requests This method prints the names of all students who have pending requests. It differentiates between "{}change"{}, "{}remove"{}, and "{}enroll"{} requests. If there are no pending requests of a certain type or at all, it outputs a message indicating this. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_request_manager_a971713cea06394731b35461fc4d037d4}{undo\+Last\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Undoes the last accepted request This method reverses the last accepted request of type "{}enroll"{}, "{}change"{}, or "{}removal"{}. It uses the \textquotesingle{}Actions\textquotesingle{} stack which stores requests in the order they were processed. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_request_manager_a6b286dab7cd11c6ac44c67aaddb28f16}{check\+UCRules}} (const \mbox{\hyperlink{class_request}{Request}} \&request, \mbox{\hyperlink{class_student_set}{Student\+Set}} Students)
+\begin{DoxyCompactList}\small\item\em Checks if a request follows the university rules. \end{DoxyCompactList}\item 
+static bool \mbox{\hyperlink{class_request_manager_abae4a3ec715407eca08051c63c2d9f87}{balance\+Disturbed}} (const \mbox{\hyperlink{class_request}{Request}} \&request)
+\begin{DoxyCompactList}\small\item\em Checks if a request would disturb the balance of student distribution across classes in the same uc The balance is considered disturbed if the class the student wants to move to would have 4 more students than the least populated class in the same UC, or if the class the student wants to move from would have 4 less students than the class the student wants to move to. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_request_manager_a440f5e5adbea2af89fe800540941399f}{file\+Request}} (const \mbox{\hyperlink{class_request}{Request}} \&request)
+\begin{DoxyCompactList}\small\item\em Writes a request to a file This method writes an accepted request to a .csv file named "{}requests\+Log.\+csv"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Manages and processes student requests This class is responsible for managing and processing different types of requests made by students. It maintains queues of different types of requests, a record of rejected requests, a stack of processed requests for undo actions, and a set of all students. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_request_manager_a8ad73941b20292e507e135e9024cc0ef}\label{class_request_manager_a8ad73941b20292e507e135e9024cc0ef} 
+\index{RequestManager@{RequestManager}!addRequest@{addRequest}}
+\index{addRequest@{addRequest}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{addRequest()}{addRequest()}}
+{\footnotesize\ttfamily void Request\+Manager\+::add\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_request}{Request}} \&}]{request }\end{DoxyParamCaption})}
+
+
+
+Adds a request to the \doxylink{class_request_manager}{Request\+Manager} This method adds a new request to the \doxylink{class_request_manager}{Request\+Manager} and categorizes it by its type. The request is added to all\+Requests queue and a specific queue based on its type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to be added. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_request_manager_abae4a3ec715407eca08051c63c2d9f87}\label{class_request_manager_abae4a3ec715407eca08051c63c2d9f87} 
+\index{RequestManager@{RequestManager}!balanceDisturbed@{balanceDisturbed}}
+\index{balanceDisturbed@{balanceDisturbed}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{balanceDisturbed()}{balanceDisturbed()}}
+{\footnotesize\ttfamily bool Request\+Manager\+::balance\+Disturbed (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_request}{Request}} \&}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if a request would disturb the balance of student distribution across classes in the same uc The balance is considered disturbed if the class the student wants to move to would have 4 more students than the least populated class in the same UC, or if the class the student wants to move from would have 4 less students than the class the student wants to move to. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to be checked. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the request would disturb the balance of student distribution or not. If the balance is disturbed, it returns true, otherwise false. 
+\end{DoxyReturn}
+\Hypertarget{class_request_manager_a6b286dab7cd11c6ac44c67aaddb28f16}\label{class_request_manager_a6b286dab7cd11c6ac44c67aaddb28f16} 
+\index{RequestManager@{RequestManager}!checkUCRules@{checkUCRules}}
+\index{checkUCRules@{checkUCRules}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{checkUCRules()}{checkUCRules()}}
+{\footnotesize\ttfamily bool Request\+Manager\+::check\+UCRules (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_request}{Request}} \&}]{request,  }\item[{\mbox{\hyperlink{class_student_set}{Student\+Set}}}]{Students }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Checks if a request follows the university rules. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to be checked. \\
+\hline
+{\em Students} & The set of students. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A boolean indicating whether the request follows the UC rules or not. 
+\end{DoxyReturn}
+\Hypertarget{class_request_manager_a440f5e5adbea2af89fe800540941399f}\label{class_request_manager_a440f5e5adbea2af89fe800540941399f} 
+\index{RequestManager@{RequestManager}!fileRequest@{fileRequest}}
+\index{fileRequest@{fileRequest}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{fileRequest()}{fileRequest()}}
+{\footnotesize\ttfamily void Request\+Manager\+::file\+Request (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_request}{Request}} \&}]{request }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Writes a request to a file This method writes an accepted request to a .csv file named "{}requests\+Log.\+csv"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to be written to the file. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_request_manager_a8a1d61ba43f307f7aa583f57909fb33d}\label{class_request_manager_a8a1d61ba43f307f7aa583f57909fb33d} 
+\index{RequestManager@{RequestManager}!getAllRequests@{getAllRequests}}
+\index{getAllRequests@{getAllRequests}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{getAllRequests()}{getAllRequests()}}
+{\footnotesize\ttfamily queue$<$ \mbox{\hyperlink{class_request}{Request}} $>$ Request\+Manager\+::get\+All\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Returns all pending requests This method returns a queue containing all pending requests. 
+
+\begin{DoxyReturn}{Returns}
+A queue containing all pending requests. 
+\end{DoxyReturn}
+\Hypertarget{class_request_manager_afc20e9af081f86767ccc3f740e6ba3d7}\label{class_request_manager_afc20e9af081f86767ccc3f740e6ba3d7} 
+\index{RequestManager@{RequestManager}!getStudentSet@{getStudentSet}}
+\index{getStudentSet@{getStudentSet}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{getStudentSet()}{getStudentSet()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_student_set}{Student\+Set}} \& Request\+Manager\+::get\+Student\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets the students in the \doxylink{class_request_manager}{Request\+Manager} This method retrieves the current set of students in the \doxylink{class_request_manager}{Request\+Manager}. 
+
+\begin{DoxyReturn}{Returns}
+The current set of students in the \doxylink{class_request_manager}{Request\+Manager}. 
+\end{DoxyReturn}
+\Hypertarget{class_request_manager_a2cb6a5b14b50c70d1f759f37f81c39fd}\label{class_request_manager_a2cb6a5b14b50c70d1f759f37f81c39fd} 
+\index{RequestManager@{RequestManager}!printPending@{printPending}}
+\index{printPending@{printPending}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{printPending()}{printPending()}}
+{\footnotesize\ttfamily void Request\+Manager\+::print\+Pending (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Prints all pending requests This method prints the names of all students who have pending requests. It differentiates between "{}change"{}, "{}remove"{}, and "{}enroll"{} requests. If there are no pending requests of a certain type or at all, it outputs a message indicating this. 
+
+\Hypertarget{class_request_manager_a0a0dc8de28c666eb973ec0cacce0c49a}\label{class_request_manager_a0a0dc8de28c666eb973ec0cacce0c49a} 
+\index{RequestManager@{RequestManager}!processAllRequests@{processAllRequests}}
+\index{processAllRequests@{processAllRequests}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{processAllRequests()}{processAllRequests()}}
+{\footnotesize\ttfamily void Request\+Manager\+::process\+All\+Requests (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Processes all pending requests This method processes all pending requests in the \doxylink{class_request_manager}{Request\+Manager}. It iterates over each request in the \textquotesingle{}all\+Requests\textquotesingle{} queue and uses the \textquotesingle{}process\+Request\textquotesingle{} method to process each request. 
+
+\Hypertarget{class_request_manager_a1676742c17142801ee97ee23f2fb6d18}\label{class_request_manager_a1676742c17142801ee97ee23f2fb6d18} 
+\index{RequestManager@{RequestManager}!processRequest@{processRequest}}
+\index{processRequest@{processRequest}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{processRequest()}{processRequest()}}
+{\footnotesize\ttfamily void Request\+Manager\+::process\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_request}{Request}} \&}]{request }\end{DoxyParamCaption})}
+
+
+
+Processes a single request This method processes a single request of type "{}enroll"{}, "{}change"{}, or "{}removal"{}. The different types of requests have different rules to be followed in order to be accepted. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request} & The request to be processed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_request_manager_adcc79212bd35fd99cd4422b8e9259302}\label{class_request_manager_adcc79212bd35fd99cd4422b8e9259302} 
+\index{RequestManager@{RequestManager}!setStudentSet@{setStudentSet}}
+\index{setStudentSet@{setStudentSet}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{setStudentSet()}{setStudentSet()}}
+{\footnotesize\ttfamily void Request\+Manager\+::set\+Student\+Set (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_student_set}{Student\+Set}} \&}]{students }\end{DoxyParamCaption})}
+
+
+
+Sets the students in the \doxylink{class_request_manager}{Request\+Manager} This method replaces the current set of students in the \doxylink{class_request_manager}{Request\+Manager} with a new set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em students} & The new set of students. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_request_manager_a971713cea06394731b35461fc4d037d4}\label{class_request_manager_a971713cea06394731b35461fc4d037d4} 
+\index{RequestManager@{RequestManager}!undoLastAction@{undoLastAction}}
+\index{undoLastAction@{undoLastAction}!RequestManager@{RequestManager}}
+\doxysubsubsection{\texorpdfstring{undoLastAction()}{undoLastAction()}}
+{\footnotesize\ttfamily void Request\+Manager\+::undo\+Last\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Undoes the last accepted request This method reverses the last accepted request of type "{}enroll"{}, "{}change"{}, or "{}removal"{}. It uses the \textquotesingle{}Actions\textquotesingle{} stack which stores requests in the order they were processed. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_request_manager_8h}{Request\+Manager.\+h}}\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_request_manager_8cpp}{Request\+Manager.\+cpp}}\end{DoxyCompactItemize}

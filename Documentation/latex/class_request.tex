@@ -1,0 +1,131 @@
+\doxysection{Request Class Reference}
+\hypertarget{class_request}{}\label{class_request}\index{Request@{Request}}
+
+
+A class representing a student\textquotesingle{}s request that stores its type, its status, the student information and the class he desires to join.  
+
+
+
+
+{\ttfamily \#include $<$Request.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_request_ac17dd8a6343a1954fad2e49c27fb8d43}{Request}} (\mbox{\hyperlink{class_student}{Student}} \texorpdfstring{$\ast$}{*}student, \mbox{\hyperlink{class_class}{Class}} \texorpdfstring{$\ast$}{*}new\+Class, string type)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_request}{Request} class. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_request_a83531a4385724d438f9abaaf095eba1d}{get\+Type}} () const
+\item 
+string \mbox{\hyperlink{class_request_ae04e12bad8a954c08d501a20210c3f0c}{get\+Status}} () const
+\item 
+\mbox{\hyperlink{class_student}{Student}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_request_a6e1f87510ea012f5e36b7b67c42e4292}{get\+Student}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the student. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_class}{Class}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_request_aeab18a84c328f14f997e570a8e010a13}{get\+Former\+Class}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the former class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_class}{Class}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{class_request_a523b2cebce7c4e1831a147c38df49a5a}{get\+New\+Class}} () const
+\begin{DoxyCompactList}\small\item\em Getter for the new class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_request_a2a80c9bc3cf03199ed39745559f98038}{set\+Status}} (string request\+Status)
+\begin{DoxyCompactList}\small\item\em Setter for the status of the request. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class representing a student\textquotesingle{}s request that stores its type, its status, the student information and the class he desires to join. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_request_ac17dd8a6343a1954fad2e49c27fb8d43}\label{class_request_ac17dd8a6343a1954fad2e49c27fb8d43} 
+\index{Request@{Request}!Request@{Request}}
+\index{Request@{Request}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{Request()}{Request()}}
+{\footnotesize\ttfamily Request\+::\+Request (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_student}{Student}} \texorpdfstring{$\ast$}{*}}]{student,  }\item[{\mbox{\hyperlink{class_class}{Class}} \texorpdfstring{$\ast$}{*}}]{new\+Class,  }\item[{string}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_request}{Request} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em student} & The student making the request. \\
+\hline
+{\em new\+Class} & The class desired by the student. \\
+\hline
+{\em type} & The type of request. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_request_aeab18a84c328f14f997e570a8e010a13}\label{class_request_aeab18a84c328f14f997e570a8e010a13} 
+\index{Request@{Request}!getFormerClass@{getFormerClass}}
+\index{getFormerClass@{getFormerClass}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getFormerClass()}{getFormerClass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_class}{Class}} \texorpdfstring{$\ast$}{*} Request\+::get\+Former\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the former class. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the former class of the student. 
+\end{DoxyReturn}
+\Hypertarget{class_request_a523b2cebce7c4e1831a147c38df49a5a}\label{class_request_a523b2cebce7c4e1831a147c38df49a5a} 
+\index{Request@{Request}!getNewClass@{getNewClass}}
+\index{getNewClass@{getNewClass}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getNewClass()}{getNewClass()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_class}{Class}} \texorpdfstring{$\ast$}{*} Request\+::get\+New\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the new class. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the new class the student desires to join. 
+\end{DoxyReturn}
+\Hypertarget{class_request_ae04e12bad8a954c08d501a20210c3f0c}\label{class_request_ae04e12bad8a954c08d501a20210c3f0c} 
+\index{Request@{Request}!getStatus@{getStatus}}
+\index{getStatus@{getStatus}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getStatus()}{getStatus()}}
+{\footnotesize\ttfamily string Request\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_request_a6e1f87510ea012f5e36b7b67c42e4292}\label{class_request_a6e1f87510ea012f5e36b7b67c42e4292} 
+\index{Request@{Request}!getStudent@{getStudent}}
+\index{getStudent@{getStudent}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getStudent()}{getStudent()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_student}{Student}} \texorpdfstring{$\ast$}{*} Request\+::get\+Student (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Getter for the student. 
+
+\begin{DoxyReturn}{Returns}
+A pointer to the student making the request. 
+\end{DoxyReturn}
+\Hypertarget{class_request_a83531a4385724d438f9abaaf095eba1d}\label{class_request_a83531a4385724d438f9abaaf095eba1d} 
+\index{Request@{Request}!getType@{getType}}
+\index{getType@{getType}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Request\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The type of the request. 
+\end{DoxyReturn}
+\Hypertarget{class_request_a2a80c9bc3cf03199ed39745559f98038}\label{class_request_a2a80c9bc3cf03199ed39745559f98038} 
+\index{Request@{Request}!setStatus@{setStatus}}
+\index{setStatus@{setStatus}!Request@{Request}}
+\doxysubsubsection{\texorpdfstring{setStatus()}{setStatus()}}
+{\footnotesize\ttfamily void Request\+::set\+Status (\begin{DoxyParamCaption}\item[{string}]{request\+Status }\end{DoxyParamCaption})}
+
+
+
+Setter for the status of the request. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em request\+Status} & The new status of the request. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_request_8h}{Request.\+h}}\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_request_8cpp}{Request.\+cpp}}\end{DoxyCompactItemize}

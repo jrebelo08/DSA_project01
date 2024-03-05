@@ -1,0 +1,71 @@
+\doxysection{Storage Class Reference}
+\hypertarget{class_storage}{}\label{class_storage}\index{Storage@{Storage}}
+
+
+The \doxylink{class_storage}{Storage} class provides static methods for reading lessons, students, and classes data from the provided .csv files.  
+
+
+
+
+{\ttfamily \#include $<$Storage.\+h$>$}
+
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$ \mbox{\hyperlink{class_storage_ad0eb9e875f9c9b96d0a3bd2453c52b08}{read\+Lessons}} ()
+\begin{DoxyCompactList}\small\item\em Reads lessons from "{}classes.\+csv"{}. \end{DoxyCompactList}\item 
+static set$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_storage_a24a4df8c8c811b87197b4f4419d3b14a}{read\+Students}} ()
+\begin{DoxyCompactList}\small\item\em Reads students from "{}students\+\_\+classes.\+csv"{} file and associates them with lessons. \end{DoxyCompactList}\item 
+static list$<$ \mbox{\hyperlink{class_class}{Class}} $>$ \mbox{\hyperlink{class_storage_a91cd1448423da0e200dfd69d02028cbe}{read\+Classes}} ()
+\begin{DoxyCompactList}\small\item\em Reads classes from "{}classes\+\_\+per\+\_\+uc.\+csv"{} file and associates them with students. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The \doxylink{class_storage}{Storage} class provides static methods for reading lessons, students, and classes data from the provided .csv files. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_storage_a91cd1448423da0e200dfd69d02028cbe}\label{class_storage_a91cd1448423da0e200dfd69d02028cbe} 
+\index{Storage@{Storage}!readClasses@{readClasses}}
+\index{readClasses@{readClasses}!Storage@{Storage}}
+\doxysubsubsection{\texorpdfstring{readClasses()}{readClasses()}}
+{\footnotesize\ttfamily list$<$ \mbox{\hyperlink{class_class}{Class}} $>$ Storage\+::read\+Classes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads classes from "{}classes\+\_\+per\+\_\+uc.\+csv"{} file and associates them with students. 
+
+\begin{DoxyReturn}{Returns}
+A list of \doxylink{class_class}{Class} objects parsed from the file. 
+\end{DoxyReturn}
+\Hypertarget{class_storage_ad0eb9e875f9c9b96d0a3bd2453c52b08}\label{class_storage_ad0eb9e875f9c9b96d0a3bd2453c52b08} 
+\index{Storage@{Storage}!readLessons@{readLessons}}
+\index{readLessons@{readLessons}!Storage@{Storage}}
+\doxysubsubsection{\texorpdfstring{readLessons()}{readLessons()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$ Storage\+::read\+Lessons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads lessons from "{}classes.\+csv"{}. 
+
+\begin{DoxyReturn}{Returns}
+A vector of \doxylink{class_lesson}{Lesson} objects parsed from the file. 
+\end{DoxyReturn}
+\Hypertarget{class_storage_a24a4df8c8c811b87197b4f4419d3b14a}\label{class_storage_a24a4df8c8c811b87197b4f4419d3b14a} 
+\index{Storage@{Storage}!readStudents@{readStudents}}
+\index{readStudents@{readStudents}!Storage@{Storage}}
+\doxysubsubsection{\texorpdfstring{readStudents()}{readStudents()}}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{class_student}{Student}} $>$ Storage\+::read\+Students (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Reads students from "{}students\+\_\+classes.\+csv"{} file and associates them with lessons. 
+
+\begin{DoxyReturn}{Returns}
+A set of \doxylink{class_student}{Student} objects parsed from the file. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_storage_8h}{Storage.\+h}}\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_storage_8cpp}{Storage.\+cpp}}\end{DoxyCompactItemize}

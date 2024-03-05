@@ -1,0 +1,38 @@
+\doxysection{Request.\+h}
+\hypertarget{_request_8h_source}{}\label{_request_8h_source}\index{C:/Users/Rafa/CLionProjects/aed\_project1final/src/Classes/Request.h@{C:/Users/Rafa/CLionProjects/aed\_project1final/src/Classes/Request.h}}
+\mbox{\hyperlink{_request_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REQUEST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REQUEST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_student_8h}{Student.h}}"{}}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_class_8h}{Class.h}}"{}}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_students_set_8h}{StudentsSet.h}}"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_request}{Request}}\ \{}
+\DoxyCodeLine{00017\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keywordtype}{string}\ type;}
+\DoxyCodeLine{00021\ \ \ \ \ \textcolor{keywordtype}{string}\ status;}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_student}{Student}}*\ student;}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{class_class}{Class}}*\ newClass;}
+\DoxyCodeLine{00026\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00027\ \ \ \ \ \mbox{\hyperlink{class_request}{Request}}(\mbox{\hyperlink{class_student}{Student}}\ *student,\ \mbox{\hyperlink{class_class}{Class}}\ *newClass,\ \textcolor{keywordtype}{string}\ type);}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_request_a83531a4385724d438f9abaaf095eba1d}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_request_ae04e12bad8a954c08d501a20210c3f0c}{getStatus}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{class_student}{Student}}*\ \mbox{\hyperlink{class_request_a6e1f87510ea012f5e36b7b67c42e4292}{getStudent}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00032\ \ \ \ \ \mbox{\hyperlink{class_class}{Class}}*\ \mbox{\hyperlink{class_request_aeab18a84c328f14f997e570a8e010a13}{getFormerClass}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ tira\ a\ classe\ do\ estudante\ para\ a\ uc\ que\ ele\ quer\ mudar}}
+\DoxyCodeLine{00033\ \ \ \ \ \mbox{\hyperlink{class_class}{Class}}*\ \mbox{\hyperlink{class_request_a523b2cebce7c4e1831a147c38df49a5a}{getNewClass}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_request_a2a80c9bc3cf03199ed39745559f98038}{setStatus}}(\textcolor{keywordtype}{string}\ requestStatus);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \};}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//REQUEST\_H}}
+
+\end{DoxyCode}

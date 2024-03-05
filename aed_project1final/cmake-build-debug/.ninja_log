@@ -1,0 +1,22 @@
+# ninja log v5
+4	508	7209284963081063	build.ninja	c99e9bf54a9bc79d
+26	4114	7209272418144484	CMakeFiles/untitled8.dir/src/Classes/Request.cpp.obj	ff280505e2c3592d
+40	3979	7209272416201985	CMakeFiles/untitled8.dir/src/Classes/RequestManager.cpp.obj	60e238861fd8b91e
+78	3866	7209272412656010	CMakeFiles/untitled8.dir/src/main/main.cpp.obj	c4b097579a99a525
+57	3924	7209272413885483	CMakeFiles/untitled8.dir/src/Classes/Student.cpp.obj	e085a75c05f87b05
+18	3965	7209272415737853	CMakeFiles/untitled8.dir/src/Classes/Class.cpp.obj	23346e971e5e9c9a
+48	3922	7209272413029203	CMakeFiles/untitled8.dir/src/Classes/Lesson.cpp.obj	2c9747140634aa23
+31	4002	7209272416972050	CMakeFiles/untitled8.dir/src/Classes/Storage.cpp.obj	f2f059ee57a73d4f
+10	4672	7209272423755632	CMakeFiles/untitled8.dir/src/Classes/App.cpp.obj	f1be209a3d24040e
+63	5344	7209272429770158	CMakeFiles/untitled8.dir/src/Classes/StudentsSet.cpp.obj	a801649075c9b961
+5344	6321	7209272440245924	untitled8.exe	da0e819fb1ae4b14
+62	10799	7209285146396370	CMakeFiles/untitled8.dir/src/Classes/Lesson.cpp.obj	31d74981de2166a1
+54	10837	7209285150173356	CMakeFiles/untitled8.dir/src/Classes/Request.cpp.obj	144b0d061c233234
+161	10841	7209285150153374	CMakeFiles/untitled8.dir/src/main/main.cpp.obj	f06babe32d1f14b6
+77	10879	7209285150624466	CMakeFiles/untitled8.dir/src/Classes/Student.cpp.obj	4a7c893ea327ccba
+41	10927	7209285151353252	CMakeFiles/untitled8.dir/src/Classes/Class.cpp.obj	2b7ff35c266ab174
+94	11004	7209285152411906	CMakeFiles/untitled8.dir/src/Classes/Storage.cpp.obj	18d6c8f30058c7c3
+48	11168	7209285152710520	CMakeFiles/untitled8.dir/src/Classes/RequestManager.cpp.obj	5facfbaf52705a44
+33	11195	7209285153929371	CMakeFiles/untitled8.dir/src/Classes/App.cpp.obj	ca8253306e8bd6ae
+71	11505	7209285155937178	CMakeFiles/untitled8.dir/src/Classes/StudentsSet.cpp.obj	11e9513dcc712a87
+11506	12659	7209285168534443	untitled8.exe	da0e819fb1ae4b14

@@ -1,0 +1,289 @@
+\doxysection{Lesson Class Reference}
+\hypertarget{class_lesson}{}\label{class_lesson}\index{Lesson@{Lesson}}
+
+
+This class represents a lesson in a schedule. The \doxylink{class_lesson}{Lesson} class includes details such as class code, uc code, week day, type of class, starting hour and ending hour of the lesson.  
+
+
+
+
+{\ttfamily \#include $<$Lesson.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lesson_aa973661e4eac9dec50e776d1afa4a149}{Lesson}} (string Class\+Code, string Uc\+Code, string Week\+Day, float start\+Hour, float end\+Hour, string Type)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_lesson}{Lesson} class. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_lesson_a0dc350c976395a165bd197ea989efa91}{get\+Uc\+Code}} () const
+\item 
+string \mbox{\hyperlink{class_lesson_a77e7f0328436b5d9d52aa7d518652ff3}{get\+Class\+Code}} () const
+\item 
+string \mbox{\hyperlink{class_lesson_a554bf75d300ab3c274ec5357cf956505}{get\+Week\+Day}} () const
+\item 
+string \mbox{\hyperlink{class_lesson_a2bd1a2212d2cc8d8f926f471e74e4463}{get\+Type}} () const
+\item 
+float \mbox{\hyperlink{class_lesson_a9245a34526cee6c8b6cdca2c45a3617f}{get\+Start\+Hour}} () const
+\item 
+float \mbox{\hyperlink{class_lesson_a01314117f537158e4cfd208b92be1b4d}{get\+End\+Hour}} () const
+\item 
+void \mbox{\hyperlink{class_lesson_a64abe879bed99352914927060b75c37c}{print\+Schedule}} () const
+\begin{DoxyCompactList}\small\item\em Prints the schedule of the lesson. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lesson_a86127ed71926089a1eab42aaf5a14a99}{operator==}} (const \mbox{\hyperlink{class_lesson}{Lesson}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality operator for the \doxylink{class_lesson}{Lesson} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lesson_abaf059c3355bad76d71d9a1adbe4f8fa}{operator$<$}} (const \mbox{\hyperlink{class_lesson}{Lesson}} \&other) const
+\begin{DoxyCompactList}\small\item\em Less than operator for the \doxylink{class_lesson}{Lesson} class. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lesson_abaf06d016d478d6e1bee2c325b22fe10}{conflicts}} (const \mbox{\hyperlink{class_lesson}{Lesson}} \&other) const
+\begin{DoxyCompactList}\small\item\em Checks if the lesson conflicts with another lesson. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_lesson_abe56a4a23cbc0a7737a9b0768ef29b65}{print\+Schedule\+UC}} () const
+\begin{DoxyCompactList}\small\item\em Prints the schedule of the UC. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static string \mbox{\hyperlink{class_lesson_a32a86f362c8b2f77c42aa77a5e076693}{Uc\+Name}} (const string \&uccode)
+\begin{DoxyCompactList}\small\item\em Returns the name of a UC based on its code. \end{DoxyCompactList}\item 
+static void \mbox{\hyperlink{class_lesson_afcb8b939b51698b650a8e11c5591e47d}{print\+Time}} (float time)
+\begin{DoxyCompactList}\small\item\em Prints formatted time. \end{DoxyCompactList}\item 
+static vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$ \mbox{\hyperlink{class_lesson_a186ce20a25e64caff4052cdb8e7a8cfe}{find\+By\+Uc\+Class}} (const string \&target\+Uc\+Code, const string \&target\+Class\+Code, const vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$ \&Lessons)
+\begin{DoxyCompactList}\small\item\em Finds a lesson by UC code and class code. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static const map$<$ string, int $>$ \mbox{\hyperlink{class_lesson_a39d41c20fd3577d5b34334070b7febaf}{week\+Num}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class represents a lesson in a schedule. The \doxylink{class_lesson}{Lesson} class includes details such as class code, uc code, week day, type of class, starting hour and ending hour of the lesson. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lesson_aa973661e4eac9dec50e776d1afa4a149}\label{class_lesson_aa973661e4eac9dec50e776d1afa4a149} 
+\index{Lesson@{Lesson}!Lesson@{Lesson}}
+\index{Lesson@{Lesson}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{Lesson()}{Lesson()}}
+{\footnotesize\ttfamily Lesson\+::\+Lesson (\begin{DoxyParamCaption}\item[{string}]{Class\+Code,  }\item[{string}]{Uc\+Code,  }\item[{string}]{Week\+Day,  }\item[{float}]{start\+Hour,  }\item[{float}]{end\+Hour,  }\item[{string}]{Type }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_lesson}{Lesson} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Class\+Code} & The class code. \\
+\hline
+{\em Uc\+Code} & The UC code. \\
+\hline
+{\em Week\+Day} & The weekday. \\
+\hline
+{\em start\+Hour} & The start hour of the lesson. \\
+\hline
+{\em end\+Hour} & The end hour of the lesson. \\
+\hline
+{\em Type} & The type of the lesson. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lesson_abaf06d016d478d6e1bee2c325b22fe10}\label{class_lesson_abaf06d016d478d6e1bee2c325b22fe10} 
+\index{Lesson@{Lesson}!conflicts@{conflicts}}
+\index{conflicts@{conflicts}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{conflicts()}{conflicts()}}
+{\footnotesize\ttfamily bool Lesson\+::conflicts (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lesson}{Lesson}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the lesson conflicts with another lesson. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other lesson to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lessons conflict, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_lesson_a186ce20a25e64caff4052cdb8e7a8cfe}\label{class_lesson_a186ce20a25e64caff4052cdb8e7a8cfe} 
+\index{Lesson@{Lesson}!findByUcClass@{findByUcClass}}
+\index{findByUcClass@{findByUcClass}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{findByUcClass()}{findByUcClass()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$ Lesson\+::find\+By\+Uc\+Class (\begin{DoxyParamCaption}\item[{const string \&}]{target\+Uc\+Code,  }\item[{const string \&}]{target\+Class\+Code,  }\item[{const vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$ \&}]{Lessons }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Finds a lesson by UC code and class code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target\+Uc\+Code} & The target UC code. \\
+\hline
+{\em target\+Class\+Code} & The target class code. \\
+\hline
+{\em Lessons} & A vector of lessons. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The lesson with the matching UC code and class code. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & If no lesson is found with the provided UC code and class code.\\
+\hline
+\end{DoxyExceptions}
+Time complexity\+: O(n), where n is the size of the vector \textquotesingle{}Lessons\textquotesingle{}. \Hypertarget{class_lesson_a77e7f0328436b5d9d52aa7d518652ff3}\label{class_lesson_a77e7f0328436b5d9d52aa7d518652ff3} 
+\index{Lesson@{Lesson}!getClassCode@{getClassCode}}
+\index{getClassCode@{getClassCode}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{getClassCode()}{getClassCode()}}
+{\footnotesize\ttfamily string Lesson\+::get\+Class\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The class code of the lesson. 
+\end{DoxyReturn}
+\Hypertarget{class_lesson_a01314117f537158e4cfd208b92be1b4d}\label{class_lesson_a01314117f537158e4cfd208b92be1b4d} 
+\index{Lesson@{Lesson}!getEndHour@{getEndHour}}
+\index{getEndHour@{getEndHour}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{getEndHour()}{getEndHour()}}
+{\footnotesize\ttfamily float Lesson\+::get\+End\+Hour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The end hour of the lesson. 
+\end{DoxyReturn}
+\Hypertarget{class_lesson_a9245a34526cee6c8b6cdca2c45a3617f}\label{class_lesson_a9245a34526cee6c8b6cdca2c45a3617f} 
+\index{Lesson@{Lesson}!getStartHour@{getStartHour}}
+\index{getStartHour@{getStartHour}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{getStartHour()}{getStartHour()}}
+{\footnotesize\ttfamily float Lesson\+::get\+Start\+Hour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The start hour of the lesson. 
+\end{DoxyReturn}
+\Hypertarget{class_lesson_a2bd1a2212d2cc8d8f926f471e74e4463}\label{class_lesson_a2bd1a2212d2cc8d8f926f471e74e4463} 
+\index{Lesson@{Lesson}!getType@{getType}}
+\index{getType@{getType}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{getType()}{getType()}}
+{\footnotesize\ttfamily string Lesson\+::get\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The type of the lesson. 
+\end{DoxyReturn}
+\Hypertarget{class_lesson_a0dc350c976395a165bd197ea989efa91}\label{class_lesson_a0dc350c976395a165bd197ea989efa91} 
+\index{Lesson@{Lesson}!getUcCode@{getUcCode}}
+\index{getUcCode@{getUcCode}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{getUcCode()}{getUcCode()}}
+{\footnotesize\ttfamily string Lesson\+::get\+Uc\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The UC code of the lesson. 
+\end{DoxyReturn}
+\Hypertarget{class_lesson_a554bf75d300ab3c274ec5357cf956505}\label{class_lesson_a554bf75d300ab3c274ec5357cf956505} 
+\index{Lesson@{Lesson}!getWeekDay@{getWeekDay}}
+\index{getWeekDay@{getWeekDay}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{getWeekDay()}{getWeekDay()}}
+{\footnotesize\ttfamily string Lesson\+::get\+Week\+Day (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The day of the week of the lesson. 
+\end{DoxyReturn}
+\Hypertarget{class_lesson_abaf059c3355bad76d71d9a1adbe4f8fa}\label{class_lesson_abaf059c3355bad76d71d9a1adbe4f8fa} 
+\index{Lesson@{Lesson}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Lesson\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lesson}{Lesson}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Less than operator for the \doxylink{class_lesson}{Lesson} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other lesson to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this lesson is before the other lesson, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_lesson_a86127ed71926089a1eab42aaf5a14a99}\label{class_lesson_a86127ed71926089a1eab42aaf5a14a99} 
+\index{Lesson@{Lesson}!operator==@{operator==}}
+\index{operator==@{operator==}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Lesson\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lesson}{Lesson}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equality operator for the \doxylink{class_lesson}{Lesson} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other lesson to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lessons are equal, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_lesson_a64abe879bed99352914927060b75c37c}\label{class_lesson_a64abe879bed99352914927060b75c37c} 
+\index{Lesson@{Lesson}!printSchedule@{printSchedule}}
+\index{printSchedule@{printSchedule}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{printSchedule()}{printSchedule()}}
+{\footnotesize\ttfamily void Lesson\+::print\+Schedule (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Prints the schedule of the lesson. 
+
+\Hypertarget{class_lesson_abe56a4a23cbc0a7737a9b0768ef29b65}\label{class_lesson_abe56a4a23cbc0a7737a9b0768ef29b65} 
+\index{Lesson@{Lesson}!printScheduleUC@{printScheduleUC}}
+\index{printScheduleUC@{printScheduleUC}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{printScheduleUC()}{printScheduleUC()}}
+{\footnotesize\ttfamily void Lesson\+::print\+Schedule\+UC (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Prints the schedule of the UC. 
+
+\Hypertarget{class_lesson_afcb8b939b51698b650a8e11c5591e47d}\label{class_lesson_afcb8b939b51698b650a8e11c5591e47d} 
+\index{Lesson@{Lesson}!printTime@{printTime}}
+\index{printTime@{printTime}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{printTime()}{printTime()}}
+{\footnotesize\ttfamily void Lesson\+::print\+Time (\begin{DoxyParamCaption}\item[{float}]{time }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Prints formatted time. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em time} & The time to print. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_lesson_a32a86f362c8b2f77c42aa77a5e076693}\label{class_lesson_a32a86f362c8b2f77c42aa77a5e076693} 
+\index{Lesson@{Lesson}!UcName@{UcName}}
+\index{UcName@{UcName}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{UcName()}{UcName()}}
+{\footnotesize\ttfamily string Lesson\+::\+Uc\+Name (\begin{DoxyParamCaption}\item[{const string \&}]{uccode }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Returns the name of a UC based on its code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uccode} & The UC code. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The name of the UC. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_lesson_a39d41c20fd3577d5b34334070b7febaf}\label{class_lesson_a39d41c20fd3577d5b34334070b7febaf} 
+\index{Lesson@{Lesson}!weekNum@{weekNum}}
+\index{weekNum@{weekNum}!Lesson@{Lesson}}
+\doxysubsubsection{\texorpdfstring{weekNum}{weekNum}}
+{\footnotesize\ttfamily const map$<$string, int$>$ Lesson\+::week\+Num\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_lesson_8h}{Lesson.\+h}}\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_lesson_8cpp}{Lesson.\+cpp}}\end{DoxyCompactItemize}

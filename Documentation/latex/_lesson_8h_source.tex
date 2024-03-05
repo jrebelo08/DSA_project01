@@ -1,0 +1,54 @@
+\doxysection{Lesson.\+h}
+\hypertarget{_lesson_8h_source}{}\label{_lesson_8h_source}\index{C:/Users/Rafa/CLionProjects/aed\_project1final/src/Classes/Lesson.h@{C:/Users/Rafa/CLionProjects/aed\_project1final/src/Classes/Lesson.h}}
+\mbox{\hyperlink{_lesson_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ LESSON\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ LESSON\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <map>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <iomanip>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_lesson}{Lesson}}\ \{}
+\DoxyCodeLine{00021\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{string}\ ClassCode;}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{string}\ UcCode;}
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{string}\ WeekDay;}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{string}\ Type;}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{float}\ startHour;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{float}\ endHour;}
+\DoxyCodeLine{00034\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_lesson}{Lesson}}(\textcolor{keywordtype}{string}\ ClassCode,\textcolor{keywordtype}{string}\ UcCode,\textcolor{keywordtype}{string}\ WeekDay,\textcolor{keywordtype}{float}\ startHour,\textcolor{keywordtype}{float}\ endHour,\ \textcolor{keywordtype}{string}\ Type);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lesson_a0dc350c976395a165bd197ea989efa91}{getUcCode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lesson_a77e7f0328436b5d9d52aa7d518652ff3}{getClassCode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lesson_a554bf75d300ab3c274ec5357cf956505}{getWeekDay}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lesson_a2bd1a2212d2cc8d8f926f471e74e4463}{getType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_lesson_a9245a34526cee6c8b6cdca2c45a3617f}{getStartHour}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_lesson_a01314117f537158e4cfd208b92be1b4d}{getEndHour}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lesson_a64abe879bed99352914927060b75c37c}{printSchedule}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ \mbox{\hyperlink{class_lesson_a32a86f362c8b2f77c42aa77a5e076693}{UcName}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&uccode);}
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ map<string,\ int>\ \mbox{\hyperlink{class_lesson_a39d41c20fd3577d5b34334070b7febaf}{weekNum}};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lesson_afcb8b939b51698b650a8e11c5591e47d}{printTime}}(\textcolor{keywordtype}{float}\ time);}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \ \ \ \ \textcolor{keyword}{static}\ vector<Lesson>\ \mbox{\hyperlink{class_lesson_a186ce20a25e64caff4052cdb8e7a8cfe}{findByUcClass}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&targetUcCode,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&targetClassCode,\ \textcolor{keyword}{const}\ vector<Lesson>\ \&Lessons)\ ;}
+\DoxyCodeLine{00051\ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_lesson_a86127ed71926089a1eab42aaf5a14a99}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_lesson}{Lesson}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_lesson_abaf059c3355bad76d71d9a1adbe4f8fa}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_lesson}{Lesson}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_lesson_abaf06d016d478d6e1bee2c325b22fe10}{conflicts}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_lesson}{Lesson}}\&\ other)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_lesson_abe56a4a23cbc0a7737a9b0768ef29b65}{printScheduleUC}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \};}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ LESSON\_H}}
+
+\end{DoxyCode}

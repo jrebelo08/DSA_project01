@@ -1,0 +1,359 @@
+\doxysection{Student\+Set Class Reference}
+\hypertarget{class_student_set}{}\label{class_student_set}\index{StudentSet@{StudentSet}}
+
+
+Represents a set of students. Provides methods for manipulating searching and printing information about students. Capabilities include insertion, removal, and various search operations using the c++ Standard Template Library (STL).  
+
+
+
+
+{\ttfamily \#include $<$Students\+Set.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_student_set_aae8240b88bf708bd6b06f34120f63ad9}{Student\+Set}} ()=default
+\item 
+\mbox{\hyperlink{class_student_set_a8d705057d02aa6ebc6c9d18e0cd3906b}{Student\+Set}} (const std\+::set$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&Students)
+\item 
+void \mbox{\hyperlink{class_student_set_a83c9991c93eb3a61c816f0f0e9c75122}{insert}} (const \mbox{\hyperlink{class_student}{Student}} \&student)
+\begin{DoxyCompactList}\small\item\em Insert a student into the set. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_student}{Student}} \mbox{\hyperlink{class_student_set_abae3468ee4d799f92d54457fc4a9d27a}{find\+\_\+by\+\_\+upcode}} (int upcode)
+\begin{DoxyCompactList}\small\item\em Find a student by their code. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_student_set_a7b26272050030a58fb869e027e8184b3}{find\+Students\+By\+Year}} (int year)
+\begin{DoxyCompactList}\small\item\em Finds students who have the maximum number of lessons in a specific academic year. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_set_affbab5f3e083ed9bced152fdef89b63d}{print\+Students}} (const string \&sort\+Type)
+\begin{DoxyCompactList}\small\item\em Prints the students sorted in a specific order. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_set_ad9af1142f86ddcf58ff0aaf1b8d1a456}{print\+\_\+by\+\_\+uc}} (const string \&uccode)
+\begin{DoxyCompactList}\small\item\em Prints the students enrolled in a specific UC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_set_a3f21f7d602cc45bdde823c2dd9a91902}{print\+Students\+By\+Year}} (int year)
+\begin{DoxyCompactList}\small\item\em Prints the students who have the maximum number of lessons in a specific academic year. \end{DoxyCompactList}\item 
+map$<$ string, int $>$ \mbox{\hyperlink{class_student_set_a644af00ffe68a15b8a3b53e1fdb8302b}{UCoccupation}} ()
+\begin{DoxyCompactList}\small\item\em Finds the occupation of each UC. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_set_a0ddda46cd14cff0dfbc2f03a8063f702}{print\+UCoccupation}} (bool ascending)
+\begin{DoxyCompactList}\small\item\em Prints the occupation of each UC in either ascending or descending order. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_student}{Student}} \mbox{\hyperlink{class_student_set_aa0d0c1eb0ecd33ae7d53c7095143d799}{find\+\_\+by\+\_\+name}} (const string \&name)
+\begin{DoxyCompactList}\small\item\em Find a student by their name. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_student_set_ac00c34da93ba978611cb7bc9b5e39f38}{find\+Students\+By\+Class}} (const string \&class\+Code)
+\begin{DoxyCompactList}\small\item\em Finds students enrolled in a specific class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_set_aeb1e9e56122e7c6c4a1f17dc060bce7e}{print\+\_\+by\+\_\+class}} (string Class\+Code)
+\begin{DoxyCompactList}\small\item\em Prints the students enrolled in a specific class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_set_aee7c1937475e18b255de6c1d7e8641c7}{more\+Ucs\+Than}} (int n)
+\begin{DoxyCompactList}\small\item\em Prints the number of students who are enrolled in more than a certain number of UCs. \end{DoxyCompactList}\item 
+map$<$ pair$<$ string, string $>$, int $>$ \mbox{\hyperlink{class_student_set_af971e19e2cfa896703218dbe9542f293}{class\+Occupation}} ()
+\begin{DoxyCompactList}\small\item\em Finds the occupation of each class. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_set_a624f2c3181c16f3bf1d9dc1052c7469c}{print\+Class\+Occupation}} (bool ascending)
+\begin{DoxyCompactList}\small\item\em Prints the occupation of each class in either ascending or descending order. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_student_set_ac92cb236d8883f6342ef893733bc0f6b}{count\+Students\+By\+Year}} (int year)
+\begin{DoxyCompactList}\small\item\em Counts the number of students who have the maximum number of lessons in a specific academic year. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_set_ac2ec78cb224381e0a9f379aaa88ba08e}{print\+Top\+Ucs}} (int max\+Ucs)
+\begin{DoxyCompactList}\small\item\em Prints the top UCs with the most number of students. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_set_aaeee9bd550d09f8455f447f21947c173}{remove\+Student}} (const \mbox{\hyperlink{class_student}{Student}} \&student)
+\begin{DoxyCompactList}\small\item\em Removes a lesson from a student\textquotesingle{}s schedule. \end{DoxyCompactList}\item 
+set$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \mbox{\hyperlink{class_student_set_a910ac86de7b5674611527432abc16f77}{get\+Set}} ()
+\begin{DoxyCompactList}\small\item\em Returns the updated students\+Set. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a set of students. Provides methods for manipulating searching and printing information about students. Capabilities include insertion, removal, and various search operations using the c++ Standard Template Library (STL). 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_student_set_aae8240b88bf708bd6b06f34120f63ad9}\label{class_student_set_aae8240b88bf708bd6b06f34120f63ad9} 
+\index{StudentSet@{StudentSet}!StudentSet@{StudentSet}}
+\index{StudentSet@{StudentSet}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{StudentSet()}{StudentSet()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Student\+Set\+::\+Student\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\Hypertarget{class_student_set_a8d705057d02aa6ebc6c9d18e0cd3906b}\label{class_student_set_a8d705057d02aa6ebc6c9d18e0cd3906b} 
+\index{StudentSet@{StudentSet}!StudentSet@{StudentSet}}
+\index{StudentSet@{StudentSet}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{StudentSet()}{StudentSet()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Student\+Set\+::\+Student\+Set (\begin{DoxyParamCaption}\item[{const std\+::set$<$ \mbox{\hyperlink{class_student}{Student}} $>$ \&}]{Students }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_student_set_af971e19e2cfa896703218dbe9542f293}\label{class_student_set_af971e19e2cfa896703218dbe9542f293} 
+\index{StudentSet@{StudentSet}!classOccupation@{classOccupation}}
+\index{classOccupation@{classOccupation}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{classOccupation()}{classOccupation()}}
+{\footnotesize\ttfamily map$<$ pair$<$ string, string $>$, int $>$ Student\+Set\+::class\+Occupation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finds the occupation of each class. 
+
+\begin{DoxyReturn}{Returns}
+A map where the key is a pair of class code and UC code and the value is the number of students enrolled in the class.
+\end{DoxyReturn}
+This operation has a time complexity of O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_ac92cb236d8883f6342ef893733bc0f6b}\label{class_student_set_ac92cb236d8883f6342ef893733bc0f6b} 
+\index{StudentSet@{StudentSet}!countStudentsByYear@{countStudentsByYear}}
+\index{countStudentsByYear@{countStudentsByYear}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{countStudentsByYear()}{countStudentsByYear()}}
+{\footnotesize\ttfamily int Student\+Set\+::count\+Students\+By\+Year (\begin{DoxyParamCaption}\item[{int}]{year }\end{DoxyParamCaption})}
+
+
+
+Counts the number of students who have the maximum number of lessons in a specific academic year. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & The academic year. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The number of students who have the maximum number of lessons in the specified year.
+\end{DoxyReturn}
+The time complexity of this operation is O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_aa0d0c1eb0ecd33ae7d53c7095143d799}\label{class_student_set_aa0d0c1eb0ecd33ae7d53c7095143d799} 
+\index{StudentSet@{StudentSet}!find\_by\_name@{find\_by\_name}}
+\index{find\_by\_name@{find\_by\_name}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{find\_by\_name()}{find\_by\_name()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_student}{Student}} Student\+Set\+::find\+\_\+by\+\_\+name (\begin{DoxyParamCaption}\item[{const string \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Find a student by their name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & name of the student \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The student with the specified name
+\end{DoxyReturn}
+This operation has a time complexity of O(n). \Hypertarget{class_student_set_abae3468ee4d799f92d54457fc4a9d27a}\label{class_student_set_abae3468ee4d799f92d54457fc4a9d27a} 
+\index{StudentSet@{StudentSet}!find\_by\_upcode@{find\_by\_upcode}}
+\index{find\_by\_upcode@{find\_by\_upcode}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{find\_by\_upcode()}{find\_by\_upcode()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_student}{Student}} Student\+Set\+::find\+\_\+by\+\_\+upcode (\begin{DoxyParamCaption}\item[{int}]{upcode }\end{DoxyParamCaption})}
+
+
+
+Find a student by their code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upcode} & unique code of the student \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The student with the specified unique code
+\end{DoxyReturn}
+This operation has a time complexity of O(n). \Hypertarget{class_student_set_ac00c34da93ba978611cb7bc9b5e39f38}\label{class_student_set_ac00c34da93ba978611cb7bc9b5e39f38} 
+\index{StudentSet@{StudentSet}!findStudentsByClass@{findStudentsByClass}}
+\index{findStudentsByClass@{findStudentsByClass}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{findStudentsByClass()}{findStudentsByClass()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ Student\+Set\+::find\+Students\+By\+Class (\begin{DoxyParamCaption}\item[{const string \&}]{class\+Code }\end{DoxyParamCaption})}
+
+
+
+Finds students enrolled in a specific class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em class\+Code} & The class code of the class. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of students enrolled in the specified class.
+\end{DoxyReturn}
+This operation has a time complexity of O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_a7b26272050030a58fb869e027e8184b3}\label{class_student_set_a7b26272050030a58fb869e027e8184b3} 
+\index{StudentSet@{StudentSet}!findStudentsByYear@{findStudentsByYear}}
+\index{findStudentsByYear@{findStudentsByYear}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{findStudentsByYear()}{findStudentsByYear()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_student}{Student}} $>$ Student\+Set\+::find\+Students\+By\+Year (\begin{DoxyParamCaption}\item[{int}]{year }\end{DoxyParamCaption})}
+
+
+
+Finds students who have the maximum number of lessons in a specific academic year. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & The academic year. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A vector of students who have the maximum number of lessons in the specified year.
+\end{DoxyReturn}
+This operation has a time complexity of O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_a910ac86de7b5674611527432abc16f77}\label{class_student_set_a910ac86de7b5674611527432abc16f77} 
+\index{StudentSet@{StudentSet}!getSet@{getSet}}
+\index{getSet@{getSet}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{getSet()}{getSet()}}
+{\footnotesize\ttfamily set$<$ \mbox{\hyperlink{class_student}{Student}} $>$ Student\+Set\+::get\+Set (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Returns the updated students\+Set. 
+
+\Hypertarget{class_student_set_a83c9991c93eb3a61c816f0f0e9c75122}\label{class_student_set_a83c9991c93eb3a61c816f0f0e9c75122} 
+\index{StudentSet@{StudentSet}!insert@{insert}}
+\index{insert@{insert}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void Student\+Set\+::insert (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{data }\end{DoxyParamCaption})}
+
+
+
+Insert a student into the set. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & student to be inserted\\
+\hline
+\end{DoxyParams}
+This operation has a time complexity of O(log n). \Hypertarget{class_student_set_aee7c1937475e18b255de6c1d7e8641c7}\label{class_student_set_aee7c1937475e18b255de6c1d7e8641c7} 
+\index{StudentSet@{StudentSet}!moreUcsThan@{moreUcsThan}}
+\index{moreUcsThan@{moreUcsThan}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{moreUcsThan()}{moreUcsThan()}}
+{\footnotesize\ttfamily void Student\+Set\+::more\+Ucs\+Than (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Prints the number of students who are enrolled in more than a certain number of UCs. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The number of UCs.\\
+\hline
+\end{DoxyParams}
+The time complexity of this operation is O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_aeb1e9e56122e7c6c4a1f17dc060bce7e}\label{class_student_set_aeb1e9e56122e7c6c4a1f17dc060bce7e} 
+\index{StudentSet@{StudentSet}!print\_by\_class@{print\_by\_class}}
+\index{print\_by\_class@{print\_by\_class}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{print\_by\_class()}{print\_by\_class()}}
+{\footnotesize\ttfamily void Student\+Set\+::print\+\_\+by\+\_\+class (\begin{DoxyParamCaption}\item[{string}]{Class\+Code }\end{DoxyParamCaption})}
+
+
+
+Prints the students enrolled in a specific class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Class\+Code} & The class code.\\
+\hline
+\end{DoxyParams}
+This operation has a time complexity of O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_ad9af1142f86ddcf58ff0aaf1b8d1a456}\label{class_student_set_ad9af1142f86ddcf58ff0aaf1b8d1a456} 
+\index{StudentSet@{StudentSet}!print\_by\_uc@{print\_by\_uc}}
+\index{print\_by\_uc@{print\_by\_uc}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{print\_by\_uc()}{print\_by\_uc()}}
+{\footnotesize\ttfamily void Student\+Set\+::print\+\_\+by\+\_\+uc (\begin{DoxyParamCaption}\item[{const string \&}]{uccode }\end{DoxyParamCaption})}
+
+
+
+Prints the students enrolled in a specific UC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uccode} & The UC code.\\
+\hline
+\end{DoxyParams}
+The time complexity of this operation is O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_a624f2c3181c16f3bf1d9dc1052c7469c}\label{class_student_set_a624f2c3181c16f3bf1d9dc1052c7469c} 
+\index{StudentSet@{StudentSet}!printClassOccupation@{printClassOccupation}}
+\index{printClassOccupation@{printClassOccupation}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{printClassOccupation()}{printClassOccupation()}}
+{\footnotesize\ttfamily void Student\+Set\+::print\+Class\+Occupation (\begin{DoxyParamCaption}\item[{bool}]{ascending }\end{DoxyParamCaption})}
+
+
+
+Prints the occupation of each class in either ascending or descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascending} & A boolean that determines whether to print in ascending or descending order.\\
+\hline
+\end{DoxyParams}
+The time complexity of this operation is O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_affbab5f3e083ed9bced152fdef89b63d}\label{class_student_set_affbab5f3e083ed9bced152fdef89b63d} 
+\index{StudentSet@{StudentSet}!printStudents@{printStudents}}
+\index{printStudents@{printStudents}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{printStudents()}{printStudents()}}
+{\footnotesize\ttfamily void Student\+Set\+::print\+Students (\begin{DoxyParamCaption}\item[{const string \&}]{sort\+Type }\end{DoxyParamCaption})}
+
+
+
+Prints the students sorted in a specific order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em sort\+Type} & The type of order to sort the students in.\\
+\hline
+\end{DoxyParams}
+The time complexity of this operation is O(n log n). \Hypertarget{class_student_set_a3f21f7d602cc45bdde823c2dd9a91902}\label{class_student_set_a3f21f7d602cc45bdde823c2dd9a91902} 
+\index{StudentSet@{StudentSet}!printStudentsByYear@{printStudentsByYear}}
+\index{printStudentsByYear@{printStudentsByYear}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{printStudentsByYear()}{printStudentsByYear()}}
+{\footnotesize\ttfamily void Student\+Set\+::print\+Students\+By\+Year (\begin{DoxyParamCaption}\item[{int}]{year }\end{DoxyParamCaption})}
+
+
+
+Prints the students who have the maximum number of lessons in a specific academic year. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em year} & The academic year.\\
+\hline
+\end{DoxyParams}
+The time complexity of this operation is O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_ac2ec78cb224381e0a9f379aaa88ba08e}\label{class_student_set_ac2ec78cb224381e0a9f379aaa88ba08e} 
+\index{StudentSet@{StudentSet}!printTopUcs@{printTopUcs}}
+\index{printTopUcs@{printTopUcs}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{printTopUcs()}{printTopUcs()}}
+{\footnotesize\ttfamily void Student\+Set\+::print\+Top\+Ucs (\begin{DoxyParamCaption}\item[{int}]{max\+Ucs }\end{DoxyParamCaption})}
+
+
+
+Prints the top UCs with the most number of students. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em max\+Ucs} & The maximum number of UCs to print.\\
+\hline
+\end{DoxyParams}
+This operation has a time complexity of O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_a0ddda46cd14cff0dfbc2f03a8063f702}\label{class_student_set_a0ddda46cd14cff0dfbc2f03a8063f702} 
+\index{StudentSet@{StudentSet}!printUCoccupation@{printUCoccupation}}
+\index{printUCoccupation@{printUCoccupation}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{printUCoccupation()}{printUCoccupation()}}
+{\footnotesize\ttfamily void Student\+Set\+::print\+UCoccupation (\begin{DoxyParamCaption}\item[{bool}]{ascending }\end{DoxyParamCaption})}
+
+
+
+Prints the occupation of each UC in either ascending or descending order. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ascending} & A boolean that determines whether to print in ascending or descending order.\\
+\hline
+\end{DoxyParams}
+The time complexity of this operation is O(n \texorpdfstring{$\ast$}{*} m). \Hypertarget{class_student_set_aaeee9bd550d09f8455f447f21947c173}\label{class_student_set_aaeee9bd550d09f8455f447f21947c173} 
+\index{StudentSet@{StudentSet}!removeStudent@{removeStudent}}
+\index{removeStudent@{removeStudent}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{removeStudent()}{removeStudent()}}
+{\footnotesize\ttfamily void Student\+Set\+::remove\+Student (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{student }\end{DoxyParamCaption})}
+
+
+
+Removes a lesson from a student\textquotesingle{}s schedule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em upcode} & The UP code of the student. \\
+\hline
+{\em lesson} & The lesson to remove.\\
+\hline
+\end{DoxyParams}
+This operation has a time complexity of O(n). \Hypertarget{class_student_set_a644af00ffe68a15b8a3b53e1fdb8302b}\label{class_student_set_a644af00ffe68a15b8a3b53e1fdb8302b} 
+\index{StudentSet@{StudentSet}!UCoccupation@{UCoccupation}}
+\index{UCoccupation@{UCoccupation}!StudentSet@{StudentSet}}
+\doxysubsubsection{\texorpdfstring{UCoccupation()}{UCoccupation()}}
+{\footnotesize\ttfamily map$<$ string, int $>$ Student\+Set\+::\+UCoccupation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Finds the occupation of each UC. 
+
+\begin{DoxyReturn}{Returns}
+A map where the key is the UC code and the value is the number of students enrolled in the UC. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_students_set_8h}{Students\+Set.\+h}}\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_students_set_8cpp}{Students\+Set.\+cpp}}\end{DoxyCompactItemize}

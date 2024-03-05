@@ -1,0 +1,65 @@
+\doxysection{Request\+Manager.\+h}
+\hypertarget{_request_manager_8h_source}{}\label{_request_manager_8h_source}\index{C:/Users/Rafa/CLionProjects/aed\_project1final/src/Classes/RequestManager.h@{C:/Users/Rafa/CLionProjects/aed\_project1final/src/Classes/RequestManager.h}}
+\mbox{\hyperlink{_request_manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ REQUESTMANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ REQUESTMANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <queue>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <stack>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_request_8h}{Request.h}}"{}}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_lesson_8h}{Lesson.h}}"{}}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_storage_8h}{Storage.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_students_set_8h}{StudentsSet.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_request_manager}{RequestManager}}\ \{}
+\DoxyCodeLine{00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00029\ \ \ \ \ queue<Request>\ allRequests;}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00035\ \ \ \ \ queue<Request>\ changingRequests;}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00041\ \ \ \ \ queue<Request>\ removalRequests;}
+\DoxyCodeLine{00042\ }
+\DoxyCodeLine{00047\ \ \ \ \ queue<Request>\ enrollmentRequests;}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00053\ \ \ \ \ vector<pair<Request,\ string>>\ rejectedRequests;}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00059\ \ \ \ \ stack<Request>\ Actions;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00065\ \ \ \ \ \mbox{\hyperlink{class_student_set}{StudentSet}}\ Students;}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_request_manager_adcc79212bd35fd99cd4422b8e9259302}{setStudentSet}}(\mbox{\hyperlink{class_student_set}{StudentSet}}\&\ students);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_student_set}{StudentSet}}\&\ \mbox{\hyperlink{class_request_manager_afc20e9af081f86767ccc3f740e6ba3d7}{getStudentSet}}();}
+\DoxyCodeLine{00072\ }
+\DoxyCodeLine{00073\ \ \ \ \ queue<Request>\ \mbox{\hyperlink{class_request_manager_a8a1d61ba43f307f7aa583f57909fb33d}{getAllRequests}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_request_manager_a8ad73941b20292e507e135e9024cc0ef}{addRequest}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_request}{Request}}\&\ request);}
+\DoxyCodeLine{00076\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_request_manager_a1676742c17142801ee97ee23f2fb6d18}{processRequest}}(\mbox{\hyperlink{class_request}{Request}}\&\ request);}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_request_manager_a0a0dc8de28c666eb973ec0cacce0c49a}{processAllRequests}}();}
+\DoxyCodeLine{00079\ }
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_request_manager_a6b286dab7cd11c6ac44c67aaddb28f16}{checkUCRules}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_request}{Request}}\&\ request,\mbox{\hyperlink{class_student_set}{StudentSet}}\ Students);}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_request_manager_abae4a3ec715407eca08051c63c2d9f87}{balanceDisturbed}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_request}{Request}}\&\ request);}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_request_manager_a2cb6a5b14b50c70d1f759f37f81c39fd}{printPending}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00084\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_request_manager_a971713cea06394731b35461fc4d037d4}{undoLastAction}}();}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00087\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_request_manager_a440f5e5adbea2af89fe800540941399f}{fileRequest}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_request}{Request}}\&\ request);}
+\DoxyCodeLine{00088\ }
+\DoxyCodeLine{00089\ \};}
+\DoxyCodeLine{00090\ }
+\DoxyCodeLine{00091\ }
+\DoxyCodeLine{00092\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//REQUESTMANAGER\_H}}
+
+\end{DoxyCode}

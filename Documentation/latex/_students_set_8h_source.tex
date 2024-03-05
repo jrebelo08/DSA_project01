@@ -1,0 +1,63 @@
+\doxysection{Students\+Set.\+h}
+\hypertarget{_students_set_8h_source}{}\label{_students_set_8h_source}\index{C:/Users/Rafa/CLionProjects/aed\_project1final/src/Classes/StudentsSet.h@{C:/Users/Rafa/CLionProjects/aed\_project1final/src/Classes/StudentsSet.h}}
+\mbox{\hyperlink{_students_set_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ STUDENTSSET\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ STUDENTSSET\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <set>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <vector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <algorithm>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{_student_8h}{Student.h}}"{}}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{using\ namespace\ }std;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00018\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_student_set}{StudentSet}}\ \{}
+\DoxyCodeLine{00019\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \ \ \ \ set<Student>\ studentsSet;}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00028\ }
+\DoxyCodeLine{00029\ \ \ \ \ \mbox{\hyperlink{class_student_set_aae8240b88bf708bd6b06f34120f63ad9}{StudentSet}}()=\ \textcolor{keywordflow}{default};}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_student_set_a8d705057d02aa6ebc6c9d18e0cd3906b}{StudentSet}}(\textcolor{keyword}{const}\ std::set<Student>\&\ Students);}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_a83c9991c93eb3a61c816f0f0e9c75122}{insert}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_student}{Student}}\&\ student);}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \ \ \ \ \mbox{\hyperlink{class_student}{Student}}\ \mbox{\hyperlink{class_student_set_abae3468ee4d799f92d54457fc4a9d27a}{find\_by\_upcode}}(\textcolor{keywordtype}{int}\ upcode);}
+\DoxyCodeLine{00036\ \ \ \ \ vector<Student>\ \mbox{\hyperlink{class_student_set_a7b26272050030a58fb869e027e8184b3}{findStudentsByYear}}(\textcolor{keywordtype}{int}\ year);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_affbab5f3e083ed9bced152fdef89b63d}{printStudents}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&sortType);}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_ad9af1142f86ddcf58ff0aaf1b8d1a456}{print\_by\_uc}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\&\ uccode);}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_a3f21f7d602cc45bdde823c2dd9a91902}{printStudentsByYear}}(\textcolor{keywordtype}{int}\ year);}
+\DoxyCodeLine{00040\ }
+\DoxyCodeLine{00041\ \ \ \ \ map<string,\ int>\ \mbox{\hyperlink{class_student_set_a644af00ffe68a15b8a3b53e1fdb8302b}{UCoccupation}}();}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_a0ddda46cd14cff0dfbc2f03a8063f702}{printUCoccupation}}(\textcolor{keywordtype}{bool}\ ascending);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \mbox{\hyperlink{class_student}{Student}}\ \mbox{\hyperlink{class_student_set_aa0d0c1eb0ecd33ae7d53c7095143d799}{find\_by\_name}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&name);}
+\DoxyCodeLine{00046\ }
+\DoxyCodeLine{00047\ \ \ \ \ vector<Student>\ \mbox{\hyperlink{class_student_set_ac00c34da93ba978611cb7bc9b5e39f38}{findStudentsByClass}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{string}\ \&classCode);}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_aeb1e9e56122e7c6c4a1f17dc060bce7e}{print\_by\_class}}(\textcolor{keywordtype}{string}\ ClassCode);}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_aee7c1937475e18b255de6c1d7e8641c7}{moreUcsThan}}(\textcolor{keywordtype}{int}\ n);}
+\DoxyCodeLine{00052\ }
+\DoxyCodeLine{00053\ \ \ \ \ map<pair<string,\ string>,\ \textcolor{keywordtype}{int}>\ \mbox{\hyperlink{class_student_set_af971e19e2cfa896703218dbe9542f293}{classOccupation}}();}
+\DoxyCodeLine{00054\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_a624f2c3181c16f3bf1d9dc1052c7469c}{printClassOccupation}}(\textcolor{keywordtype}{bool}\ ascending);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_student_set_ac92cb236d8883f6342ef893733bc0f6b}{countStudentsByYear}}(\textcolor{keywordtype}{int}\ year);}
+\DoxyCodeLine{00058\ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_ac2ec78cb224381e0a9f379aaa88ba08e}{printTopUcs}}(\textcolor{keywordtype}{int}\ maxUcs);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_student_set_aaeee9bd550d09f8455f447f21947c173}{removeStudent}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{class_student}{Student}}\&\ student);}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00063\ \ \ \ \ set<Student>\ \mbox{\hyperlink{class_student_set_a910ac86de7b5674611527432abc16f77}{getSet}}();}
+\DoxyCodeLine{00064\ }
+\DoxyCodeLine{00065\ \};}
+\DoxyCodeLine{00066\ }
+\DoxyCodeLine{00067\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ STUDENTSSET\_H}}
+
+\end{DoxyCode}

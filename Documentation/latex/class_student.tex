@@ -1,0 +1,172 @@
+\doxysection{Student Class Reference}
+\hypertarget{class_student}{}\label{class_student}\index{Student@{Student}}
+
+
+\doxylink{class_class}{Class} to store the information about a student.  
+
+
+
+
+{\ttfamily \#include $<$Student.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}{Student}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{class_student}{Student} class. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_student_a7be77cdf269ec24350e680137146d01c}{Student}} (int Code, string Name, vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$ Lessons)
+\begin{DoxyCompactList}\small\item\em Constructor for the \doxylink{class_student}{Student} class that takes Code, Name, and Lessons. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_student_a81285fde9a9cb150f49621ac58bdb085}{get\+Code}} () const
+\item 
+string \mbox{\hyperlink{class_student_a1df6c28e6416e20d338b9ff11bdc1e04}{get\+Name}} () const
+\item 
+vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$ \mbox{\hyperlink{class_student_a343d342823d44d829faf495dc1f07f05}{get\+Lessons}} () const
+\item 
+bool \mbox{\hyperlink{class_student_af223f6b71518e11702a8dbd1d5e380a7}{operator$<$}} (const \mbox{\hyperlink{class_student}{Student}} \&) const
+\begin{DoxyCompactList}\small\item\em Less than operator used for ordering students. Students are ordered by their code. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_student_a8f7c31ed0e331481ac58f12b2e822047}{operator==}} (const \mbox{\hyperlink{class_student}{Student}} \&other) const
+\begin{DoxyCompactList}\small\item\em Equality operator for the \doxylink{class_student}{Student} class. Two student objects are considered equal if they have the same code and name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_a99bcad2732a4d9b7e0413b9ff90dcd03}{add\+Lesson}} (const \mbox{\hyperlink{class_lesson}{Lesson}} \&lesson)
+\begin{DoxyCompactList}\small\item\em Adds a lesson to the student\textquotesingle{}s schedule. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_student_a7d5dfde642547f5e178460ec32bc2740}{remove\+Lesson}} (const \mbox{\hyperlink{class_lesson}{Lesson}} \&lesson)
+\begin{DoxyCompactList}\small\item\em Removes a lesson from the student\textquotesingle{}s schedule. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_class}{Class} to store the information about a student. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d}\label{class_student_af9168cedbfa5565cf0b20c1a9d3f5c9d} 
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{class_student}{Student} class. 
+
+\Hypertarget{class_student_a7be77cdf269ec24350e680137146d01c}\label{class_student_a7be77cdf269ec24350e680137146d01c} 
+\index{Student@{Student}!Student@{Student}}
+\index{Student@{Student}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{Student()}{Student()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Student\+::\+Student (\begin{DoxyParamCaption}\item[{int}]{Code,  }\item[{string}]{Name,  }\item[{vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$}]{Lessons }\end{DoxyParamCaption})}
+
+
+
+Constructor for the \doxylink{class_student}{Student} class that takes Code, Name, and Lessons. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Code} & Unique identifier for the student. \\
+\hline
+{\em Name} & The name of the student. \\
+\hline
+{\em Lessons} & The lessons that the student is enrolled in. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_student_a99bcad2732a4d9b7e0413b9ff90dcd03}\label{class_student_a99bcad2732a4d9b7e0413b9ff90dcd03} 
+\index{Student@{Student}!addLesson@{addLesson}}
+\index{addLesson@{addLesson}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{addLesson()}{addLesson()}}
+{\footnotesize\ttfamily void Student\+::add\+Lesson (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lesson}{Lesson}} \&}]{lesson }\end{DoxyParamCaption})}
+
+
+
+Adds a lesson to the student\textquotesingle{}s schedule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lesson} & The lesson to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_student_a81285fde9a9cb150f49621ac58bdb085}\label{class_student_a81285fde9a9cb150f49621ac58bdb085} 
+\index{Student@{Student}!getCode@{getCode}}
+\index{getCode@{getCode}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily int Student\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The code that identifies the student. 
+\end{DoxyReturn}
+\Hypertarget{class_student_a343d342823d44d829faf495dc1f07f05}\label{class_student_a343d342823d44d829faf495dc1f07f05} 
+\index{Student@{Student}!getLessons@{getLessons}}
+\index{getLessons@{getLessons}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getLessons()}{getLessons()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{class_lesson}{Lesson}} $>$ Student\+::get\+Lessons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The lessons that the student is enrolled in. 
+\end{DoxyReturn}
+\Hypertarget{class_student_a1df6c28e6416e20d338b9ff11bdc1e04}\label{class_student_a1df6c28e6416e20d338b9ff11bdc1e04} 
+\index{Student@{Student}!getName@{getName}}
+\index{getName@{getName}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Student\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\begin{DoxyReturn}{Returns}
+The name of the student. 
+\end{DoxyReturn}
+\Hypertarget{class_student_af223f6b71518e11702a8dbd1d5e380a7}\label{class_student_af223f6b71518e11702a8dbd1d5e380a7} 
+\index{Student@{Student}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Student\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Less than operator used for ordering students. Students are ordered by their code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other student to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if this student\textquotesingle{}s code is less than the other\textquotesingle{}s, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_student_a8f7c31ed0e331481ac58f12b2e822047}\label{class_student_a8f7c31ed0e331481ac58f12b2e822047} 
+\index{Student@{Student}!operator==@{operator==}}
+\index{operator==@{operator==}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Student\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_student}{Student}} \&}]{other }\end{DoxyParamCaption}) const}
+
+
+
+Equality operator for the \doxylink{class_student}{Student} class. Two student objects are considered equal if they have the same code and name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other student to compare with. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the students are equal, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{class_student_a7d5dfde642547f5e178460ec32bc2740}\label{class_student_a7d5dfde642547f5e178460ec32bc2740} 
+\index{Student@{Student}!removeLesson@{removeLesson}}
+\index{removeLesson@{removeLesson}!Student@{Student}}
+\doxysubsubsection{\texorpdfstring{removeLesson()}{removeLesson()}}
+{\footnotesize\ttfamily void Student\+::remove\+Lesson (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_lesson}{Lesson}} \&}]{lesson }\end{DoxyParamCaption})}
+
+
+
+Removes a lesson from the student\textquotesingle{}s schedule. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lesson} & The lesson to remove. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the lesson was found and removed, false otherwise.
+\end{DoxyReturn}
+Time complexity\+: O(n), where n is the number of lessons the student has. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_student_8h}{Student.\+h}}\item 
+C\+:/\+Users/\+Rafa/\+CLion\+Projects/aed\+\_\+project1final/src/\+Classes/\mbox{\hyperlink{_student_8cpp}{Student.\+cpp}}\end{DoxyCompactItemize}
